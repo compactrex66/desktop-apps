@@ -35,13 +35,33 @@ namespace Tables
                 }
             }
         }
+        private int BinarySearch(int needle, int[] haystack)
+        {
+            Sort(haystack);
+            int start = 0, end = haystack.Length-1, middle;
+            while(start <= end)
+            {
+                middle = (start + end) / 2;
+                if (haystack[middle] == needle)
+                {
+                    return middle;
+                }
+                else if (haystack[middle] > needle)
+                {
+                    end = middle-1;
+                } else
+                {
+                    start = middle+1;
+                }
+            }
+            return -1;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
             tab = new int[dataGridView1.ColumnCount];
 
-            dataGridView2.Visible = false;
             label1.Visible = false;
             textBox1.Visible = false;
 
@@ -96,8 +116,6 @@ namespace Tables
         {
             if (tab == null) return;
 
-            dataGridView2.Visible = true;
-
             Sort(tab);
             for (int i = 0;i < dataGridView2.RowCount; i++)
             {
@@ -106,6 +124,21 @@ namespace Tables
                     dataGridView2.Rows[i].Cells[j].Value = tab[j];
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+            textBox2.Visible = true;
+            if (tab == null || textBox2.Text == "") return;
+
+            int needle = Int32.Parse(textBox2.Text);
+            int foundIndex = BinarySearch(needle, tab);
+            label1.Text = "Indeks elementu: ";
+            textBox1.Text = foundIndex != -1 ? foundIndex.ToString() : "Nie znaleziono liczby";
+
+            label1.Visible= true;
+            textBox1.Visible=true;
         }
     }
 }

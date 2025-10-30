@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\Tables\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tables\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E7075C6-4479-46B5-B8DC-348533F8FB71}|Tables\\Tables.csproj|c:\\users\\ucze\u0144\\desktop\\desktop-apps\\tables\\tables\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7075C6-4479-46B5-B8DC-348533F8FB71}|Tables\\Tables.csproj|solutionrelative:tables\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\tables\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tables\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7E7075C6-4479-46B5-B8DC-348533F8FB71}|Tables\\Tables.csproj|c:\\users\\ucze\u0144\\desktop\\desktop-apps\\tables\\tables\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E7075C6-4479-46B5-B8DC-348533F8FB71}|Tables\\Tables.csproj|solutionrelative:tables\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\Tables\\Form1.cs",
-              "RelativeDocumentMoniker": "Tables\\Form1.cs",
-              "ToolTip": "C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\Tables\\Form1.cs",
-              "RelativeToolTip": "Tables\\Form1.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwGIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T06:43:42.555Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -42,8 +29,21 @@
               "ToolTip": "C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\Tables\\Form1.cs [Projekt]",
               "RelativeToolTip": "Tables\\Form1.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T06:34:06.459Z",
+              "WhenOpened": "2025-10-30T11:07:13.161Z",
               "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\Tables\\Form1.cs",
+              "RelativeDocumentMoniker": "Tables\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ucze\u0144\\Desktop\\desktop-apps\\Tables\\Tables\\Form1.cs",
+              "RelativeToolTip": "Tables\\Form1.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAQwIIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:43:42.555Z",
+              "EditorCaption": ""
             }
           ]
         }
