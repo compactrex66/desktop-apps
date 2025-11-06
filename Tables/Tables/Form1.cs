@@ -35,6 +35,31 @@ namespace Tables
                 }
             }
         }
+        
+        private void QuickSort(int[] arr, int lewy, int prawy)
+        {
+            int pivot = arr[(lewy + prawy) / 2];
+            int i, j, tmp;
+            i = lewy;
+            j = prawy;
+            do
+            {
+                while (arr[i] < pivot) i++;
+                while (arr[j] > pivot) j--;
+                if (i <= j)
+                {
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                    i++;
+                    j--;
+                }
+            } while (i <= j);
+
+            if (j > lewy) QuickSort(arr, lewy, j);
+            if (i < prawy) QuickSort(arr, i, prawy);
+        }
+
         private int BinarySearch(int needle, int[] haystack)
         {
             Sort(haystack);
@@ -56,7 +81,7 @@ namespace Tables
             }
             return -1;
         }
-
+        
         private int RecursiveBinarySearch(int needle, int[] haystack, int end, int start = 0)
         {
             int middle;
@@ -73,7 +98,7 @@ namespace Tables
             else
                 return RecursiveBinarySearch(needle, haystack, end, middle + 1);
         }
-
+        
         private void MyMerge(int[] tab, int start, int end)
         {
             int index, index1, index2, middle;
@@ -119,7 +144,7 @@ namespace Tables
                 }
             }
         }
-
+        
         private void MyMergeSort(int[] tab, int start, int end)
         {
             int middle = (start + end) / 2;
@@ -239,6 +264,20 @@ namespace Tables
             if (tab == null) return;
 
             MyMergeSort(tab, 0, tab.Length-1);
+            for (int i = 0; i < dataGridView2.RowCount; i++)
+            {
+                for (int j = 0; j < dataGridView2.ColumnCount; j++)
+                {
+                    dataGridView2.Rows[i].Cells[j].Value = tab[j];
+                }
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (tab == null) return;
+
+            QuickSort(tab, 0, tab.Length-1);
             for (int i = 0; i < dataGridView2.RowCount; i++)
             {
                 for (int j = 0; j < dataGridView2.ColumnCount; j++)
