@@ -1,0 +1,219 @@
+﻿namespace MenuStrip
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Wymagana zmienna projektanta.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Wyczyść wszystkie używane zasoby.
+        /// </summary>
+        /// <param name="disposing">prawda, jeżeli zarządzane zasoby powinny zostać zlikwidowane; Fałsz w przeciwnym wypadku.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Kod generowany przez Projektanta formularzy systemu Windows
+
+        /// <summary>
+        /// Metoda wymagana do obsługi projektanta — nie należy modyfikować
+        /// jej zawartości w edytorze kodu.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.obliczeniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.energiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.potencjalnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kinetycznaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ruchJednostajnyProstoliniowyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prędkośćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drogaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.czasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.obliczeniaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // obliczeniaToolStripMenuItem
+            // 
+            this.obliczeniaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.energiaToolStripMenuItem,
+            this.ruchJednostajnyProstoliniowyToolStripMenuItem});
+            this.obliczeniaToolStripMenuItem.Name = "obliczeniaToolStripMenuItem";
+            this.obliczeniaToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.obliczeniaToolStripMenuItem.Text = "Obliczenia";
+            // 
+            // energiaToolStripMenuItem
+            // 
+            this.energiaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.potencjalnaToolStripMenuItem,
+            this.kinetycznaToolStripMenuItem});
+            this.energiaToolStripMenuItem.Name = "energiaToolStripMenuItem";
+            this.energiaToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.energiaToolStripMenuItem.Text = "Energia";
+            // 
+            // potencjalnaToolStripMenuItem
+            // 
+            this.potencjalnaToolStripMenuItem.Name = "potencjalnaToolStripMenuItem";
+            this.potencjalnaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.potencjalnaToolStripMenuItem.Text = "Potencjalna";
+            this.potencjalnaToolStripMenuItem.Click += new System.EventHandler(this.potencjalnaToolStripMenuItem_Click);
+            // 
+            // kinetycznaToolStripMenuItem
+            // 
+            this.kinetycznaToolStripMenuItem.Name = "kinetycznaToolStripMenuItem";
+            this.kinetycznaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kinetycznaToolStripMenuItem.Text = "Kinetyczna";
+            this.kinetycznaToolStripMenuItem.Click += new System.EventHandler(this.kinetycznaToolStripMenuItem_Click);
+            // 
+            // ruchJednostajnyProstoliniowyToolStripMenuItem
+            // 
+            this.ruchJednostajnyProstoliniowyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prędkośćToolStripMenuItem,
+            this.drogaToolStripMenuItem,
+            this.czasToolStripMenuItem});
+            this.ruchJednostajnyProstoliniowyToolStripMenuItem.Name = "ruchJednostajnyProstoliniowyToolStripMenuItem";
+            this.ruchJednostajnyProstoliniowyToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ruchJednostajnyProstoliniowyToolStripMenuItem.Text = "Ruch jednostajny prostoliniowy";
+            // 
+            // prędkośćToolStripMenuItem
+            // 
+            this.prędkośćToolStripMenuItem.Name = "prędkośćToolStripMenuItem";
+            this.prędkośćToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prędkośćToolStripMenuItem.Text = "Prędkość";
+            this.prędkośćToolStripMenuItem.Click += new System.EventHandler(this.prędkośćToolStripMenuItem_Click);
+            // 
+            // drogaToolStripMenuItem
+            // 
+            this.drogaToolStripMenuItem.Name = "drogaToolStripMenuItem";
+            this.drogaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.drogaToolStripMenuItem.Text = "Droga";
+            this.drogaToolStripMenuItem.Click += new System.EventHandler(this.drogaToolStripMenuItem_Click);
+            // 
+            // czasToolStripMenuItem
+            // 
+            this.czasToolStripMenuItem.Name = "czasToolStripMenuItem";
+            this.czasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.czasToolStripMenuItem.Text = "Czas";
+            this.czasToolStripMenuItem.Click += new System.EventHandler(this.czasToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Masa";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Wysokość";
+            this.label2.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(87, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(87, 63);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Oblicz";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 136);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(175, 20);
+            this.textBox3.TabIndex = 6;
+            this.textBox3.Visible = false;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Form1";
+            this.Text = "Fizyka";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem obliczeniaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem energiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem potencjalnaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kinetycznaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ruchJednostajnyProstoliniowyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prędkośćToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drogaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem czasToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+    }
+}
+
