@@ -37,22 +37,32 @@
             this.prędkośćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drogaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.obliczeniaToolStripMenuItem});
+            this.obliczeniaToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(445, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,14 +87,14 @@
             // potencjalnaToolStripMenuItem
             // 
             this.potencjalnaToolStripMenuItem.Name = "potencjalnaToolStripMenuItem";
-            this.potencjalnaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.potencjalnaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.potencjalnaToolStripMenuItem.Text = "Potencjalna";
             this.potencjalnaToolStripMenuItem.Click += new System.EventHandler(this.potencjalnaToolStripMenuItem_Click);
             // 
             // kinetycznaToolStripMenuItem
             // 
             this.kinetycznaToolStripMenuItem.Name = "kinetycznaToolStripMenuItem";
-            this.kinetycznaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kinetycznaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.kinetycznaToolStripMenuItem.Text = "Kinetyczna";
             this.kinetycznaToolStripMenuItem.Click += new System.EventHandler(this.kinetycznaToolStripMenuItem_Click);
             // 
@@ -101,23 +111,30 @@
             // prędkośćToolStripMenuItem
             // 
             this.prędkośćToolStripMenuItem.Name = "prędkośćToolStripMenuItem";
-            this.prędkośćToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prędkośćToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.prędkośćToolStripMenuItem.Text = "Prędkość";
             this.prędkośćToolStripMenuItem.Click += new System.EventHandler(this.prędkośćToolStripMenuItem_Click);
             // 
             // drogaToolStripMenuItem
             // 
             this.drogaToolStripMenuItem.Name = "drogaToolStripMenuItem";
-            this.drogaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.drogaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.drogaToolStripMenuItem.Text = "Droga";
             this.drogaToolStripMenuItem.Click += new System.EventHandler(this.drogaToolStripMenuItem_Click);
             // 
             // czasToolStripMenuItem
             // 
             this.czasToolStripMenuItem.Name = "czasToolStripMenuItem";
-            this.czasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.czasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.czasToolStripMenuItem.Text = "Czas";
             this.czasToolStripMenuItem.Click += new System.EventHandler(this.czasToolStripMenuItem_Click);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -157,7 +174,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 98);
+            this.button1.Location = new System.Drawing.Point(299, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 5;
@@ -168,18 +185,105 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 136);
+            this.textBox3.Location = new System.Drawing.Point(258, 110);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(175, 20);
             this.textBox3.TabIndex = 6;
             this.textBox3.Visible = false;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(115, 17);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Energia kinetyczna";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Visible = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(127, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(119, 17);
+            this.radioButton2.TabIndex = 8;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Energia potencjalna";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(7, 54);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(245, 50);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Visible = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Pęd",
+            "Prędkość",
+            "Energia kinetyczna",
+            "Energia Potencjalna",
+            "Częstotliwość",
+            "Siła"});
+            this.listBox1.Location = new System.Drawing.Point(7, 129);
+            this.listBox1.MultiColumn = true;
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBox1.Size = new System.Drawing.Size(245, 43);
+            this.listBox1.TabIndex = 10;
+            this.listBox1.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 113);
+            this.label3.MaximumSize = new System.Drawing.Size(250, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
+            this.label3.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(134, 178);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(118, 21);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 181);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Wybierz jednostkę siły: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(445, 319);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -192,6 +296,8 @@
             this.Text = "Fizyka";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +320,14 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 

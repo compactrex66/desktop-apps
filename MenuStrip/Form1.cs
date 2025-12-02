@@ -18,14 +18,32 @@ namespace MenuStrip
             InitializeComponent();
         }
 
-        private void ShowComponents()
+        private void ShowCalculateComponents()
         {
+            groupBox1.Hide();
+            label3.Hide();
+            listBox1.Hide();
             label1.Show();
             label2.Show();
             textBox1.Show();
             textBox2.Show();
             button1.Show();
             textBox3.Show();
+        }
+
+        private void ShowTestComponents()
+        {
+            label2.Hide();
+            textBox2.Hide();
+            label1.Show();
+            textBox1.Show();
+            button1.Show();
+            textBox3.Show();
+            radioButton1.Show();
+            radioButton2.Show();
+            groupBox1.Show();
+            label3.Show();
+            listBox1.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,7 +96,7 @@ namespace MenuStrip
             label1.Text = "Masa";
             label2.Text = "Wysokość";
             action = "calculatePotentialEnergy";
-            ShowComponents();
+            ShowCalculateComponents();
         }
 
         private void kinetycznaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,7 +104,7 @@ namespace MenuStrip
             label1.Text = "Masa";
             label2.Text = "Prędkość";
             action = "calculateKineticEnergy";
-            ShowComponents();
+            ShowCalculateComponents();
         }
 
         private void prędkośćToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,7 +112,7 @@ namespace MenuStrip
             label1.Text = "Droga";
             label2.Text = "Czas";
             action = "calculateVelocity";
-            ShowComponents();
+            ShowCalculateComponents();
         }
 
         private void drogaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,7 +120,7 @@ namespace MenuStrip
             label1.Text = "Prędkość";
             label2.Text = "Czas";
             action = "calculateDistance";
-            ShowComponents();
+            ShowCalculateComponents();
         }
 
         private void czasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,7 +128,16 @@ namespace MenuStrip
             label1.Text = "Prędkość";
             label2.Text = "Droga";
             action = "calculateTime";
-            ShowComponents();
+            ShowCalculateComponents();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Nazwisko";
+            groupBox1.Text = "Jaka energia wzrasta wraz z prędkością ?";
+            label3.Text = "Które z podanych wartości zależą od masy: ";
+            action = "test";
+            ShowTestComponents();
         }
     }
 }
