@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,18 @@ namespace MenuStrip
             groupBox1.Hide();
             label3.Hide();
             listBox1.Hide();
+            label4.Hide();
+            comboBox1.Hide();
+            label5.Hide();
+            checkBox1.Hide();
+            checkBox2.Hide();
             label1.Show();
             label2.Show();
             textBox1.Show();
             textBox2.Show();
             button1.Show();
             textBox3.Show();
+            button1.Text = "Oblicz";
         }
 
         private void ShowTestComponents()
@@ -44,6 +51,12 @@ namespace MenuStrip
             groupBox1.Show();
             label3.Show();
             listBox1.Show();
+            label4.Show();
+            comboBox1.Show();
+            label5.Show();
+            checkBox1.Show();
+            checkBox2.Show();
+            button1.Text = "Sprawdź";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,6 +101,21 @@ namespace MenuStrip
                 distance = float.Parse(textBox2.Text);
 
                 textBox3.Text = velocity / distance + " s";
+            } else if (action == "test")
+            {
+                string name = textBox1.Text;
+                int points = 0;
+                if (radioButton1.Checked) points++;
+                if (listBox1.SelectedItems.Count == 4 && 
+                    listBox1.SelectedItems.Contains("Pęd") && 
+                    listBox1.SelectedItems.Contains("Energia Potencjalna") && 
+                    listBox1.SelectedItems.Contains("Siła") &&
+                    listBox1.SelectedItems.Contains("Energia kinetyczna")) 
+                    points++;
+                if (comboBox1.SelectedText == "N") points++; Console.WriteLine(comboBox1.SelectedText);
+                if (!checkBox1.Checked) points++;
+                if (checkBox2.Checked) points++;
+                Console.WriteLine(points.ToString());
             }
         }
 
@@ -136,6 +164,8 @@ namespace MenuStrip
             label1.Text = "Nazwisko";
             groupBox1.Text = "Jaka energia wzrasta wraz z prędkością ?";
             label3.Text = "Które z podanych wartości zależą od masy: ";
+            label4.Text = "Która to jednostka siły: ";
+            checkBox1.Text = "Im większa prędkość ciała tym większa energia potencjalna";
             action = "test";
             ShowTestComponents();
         }
