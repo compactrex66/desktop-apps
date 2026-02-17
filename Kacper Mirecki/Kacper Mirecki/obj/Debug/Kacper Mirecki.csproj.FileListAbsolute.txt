@@ -1,0 +1,11 @@
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\bin\Debug\Kacper Mirecki.exe.config
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\bin\Debug\Kacper Mirecki.exe
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\bin\Debug\Kacper Mirecki.pdb
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper Mirecki.csproj.AssemblyReference.cache
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper_Mirecki.Form1.resources
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper_Mirecki.Properties.Resources.resources
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper Mirecki.csproj.GenerateResource.cache
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper Mirecki.csproj.CoreCompileInputs.cache
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper Mirecki.exe
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper Mirecki.pdb
+C:\Users\Uczeń\Desktop\Kacper Mirecki\Kacper Mirecki\obj\Debug\Kacper Mirecki.exe.config
