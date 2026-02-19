@@ -21,14 +21,7 @@ namespace MenuStrip
 
         private void ShowCalculateComponents()
         {
-            groupBox1.Hide();
-            label3.Hide();
-            listBox1.Hide();
-            label4.Hide();
-            comboBox1.Hide();
-            label5.Hide();
-            checkBox1.Hide();
-            checkBox2.Hide();
+            HideAllControls();
             label1.Show();
             label2.Show();
             textBox1.Show();
@@ -40,8 +33,7 @@ namespace MenuStrip
 
         private void ShowTestComponents()
         {
-            label2.Hide();
-            textBox2.Hide();
+            HideAllControls();
             label1.Show();
             textBox1.Show();
             button1.Show();
@@ -57,6 +49,44 @@ namespace MenuStrip
             checkBox1.Show();
             checkBox2.Show();
             button1.Text = "Sprawdź";
+        }
+
+        private void HideAllControls()
+        {
+            groupBox1.Hide();
+            label3.Hide();
+            listBox1.Hide();
+            label4.Hide();
+            comboBox1.Hide();
+            label5.Hide();
+            checkBox1.Hide();
+            checkBox2.Hide();
+            groupBox3.Hide();
+            label2.Hide();
+            textBox2.Hide();
+            groupBox3.Hide();
+        }
+
+        private Color GetChosenColor()
+        {
+            int red = hScrollBar1.Value;
+            int green = hScrollBar2.Value;
+            int blue = hScrollBar3.Value;
+
+            Color color = Color.FromArgb(red, green, blue);
+
+            return color;
+        }
+
+        private void ChangePanelColor()
+        {
+            Color color = GetChosenColor();
+
+            panel1.BackColor = color;
+
+            textBox4.Text = color.R.ToString();
+            textBox5.Text = color.G.ToString();
+            textBox6.Text = color.B.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -168,6 +198,34 @@ namespace MenuStrip
             checkBox1.Text = "Im większa prędkość ciała tym większa energia potencjalna";
             action = "test";
             ShowTestComponents();
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            ChangePanelColor();
+        }
+
+        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            ChangePanelColor();
+        }
+
+        private void hScrollBar3_Scroll(object sender, ScrollEventArgs e)
+        {
+            ChangePanelColor();
+        }
+
+        private void wybórKoloruToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllControls();
+            groupBox3.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Color color = GetChosenColor();
+            label10.Text = $"{color.R}, {color.G}, {color.B}";
+            label10.BackColor = color;
         }
     }
 }
