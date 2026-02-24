@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -65,6 +66,7 @@ namespace MenuStrip
             label2.Hide();
             textBox2.Hide();
             groupBox3.Hide();
+            panel2.Hide();
         }
 
         private Color GetChosenColor()
@@ -226,6 +228,45 @@ namespace MenuStrip
             Color color = GetChosenColor();
             label10.Text = $"{color.R}, {color.G}, {color.B}";
             label10.BackColor = color;
+        }
+
+        private void energiaPotencjalnaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllControls();
+            panel2.Show();
+            Graphics graphics = panel2.CreateGraphics();
+            Rectangle panelRectangle = panel2.ClientRectangle;
+            Pen pen = new Pen(Color.Black, 2);
+            Pen pen2 = new Pen(DefaultBackColor, 2);
+            
+            int ellipseSize = 50, middlePanelX = panelRectangle.Right / 2 - ellipseSize / 2;
+            
+            for(float i = 1; i < 300; i*=1.2f)
+            {
+                graphics.Clear(DefaultBackColor);
+                graphics.DrawEllipse(pen, middlePanelX, panelRectangle.Y + 5 + i, ellipseSize, ellipseSize);
+                graphics.DrawLine(pen, 5, panelRectangle.Y + 345, panelRectangle.Right - 5, panelRectangle.Y + 345);
+                Thread.Sleep(5);
+            }
+        }
+
+        private void energiaKinetycznaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HideAllControls();
+            groupBox4.Show();
+            Graphics graphics = panel3.CreateGraphics();
+            Rectangle panelRectangle = panel3.ClientRectangle;
+            Pen pen = new Pen(Color.Black, 2);
+            int carWidth = 50, carHeight = 25;
+
+            graphics.DrawLine(pen, panelRectangle.Left, panelRectangle.Bottom, panelRectangle.Right, panelRectangle.Bottom);
+
+            for(float i = 1; i < 300; i*=1.1f)
+            {
+                graphics.Clear(DefaultBackColor);
+                graphics.DrawRectangle(pen, i, panelRectangle.Bottom - carHeight - 5, carWidth, carHeight);
+                Thread.Sleep(5);
+            }
         }
     }
 }

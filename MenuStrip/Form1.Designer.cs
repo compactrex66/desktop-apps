@@ -39,6 +39,8 @@
             this.czasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wybórKoloruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.interpretacjaGraficznaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.energiaPotencjalnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -70,10 +72,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.energiaKinetycznaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,10 +91,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.obliczeniaToolStripMenuItem,
             this.testToolStripMenuItem,
-            this.wybórKoloruToolStripMenuItem});
+            this.wybórKoloruToolStripMenuItem,
+            this.interpretacjaGraficznaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(271, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(349, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,6 +175,22 @@
             this.wybórKoloruToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.wybórKoloruToolStripMenuItem.Text = "Wybór koloru";
             this.wybórKoloruToolStripMenuItem.Click += new System.EventHandler(this.wybórKoloruToolStripMenuItem_Click);
+            // 
+            // interpretacjaGraficznaToolStripMenuItem
+            // 
+            this.interpretacjaGraficznaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.energiaPotencjalnaToolStripMenuItem,
+            this.energiaKinetycznaToolStripMenuItem});
+            this.interpretacjaGraficznaToolStripMenuItem.Name = "interpretacjaGraficznaToolStripMenuItem";
+            this.interpretacjaGraficznaToolStripMenuItem.Size = new System.Drawing.Size(136, 20);
+            this.interpretacjaGraficznaToolStripMenuItem.Text = "Interpretacja graficzna";
+            // 
+            // energiaPotencjalnaToolStripMenuItem
+            // 
+            this.energiaPotencjalnaToolStripMenuItem.Name = "energiaPotencjalnaToolStripMenuItem";
+            this.energiaPotencjalnaToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.energiaPotencjalnaToolStripMenuItem.Text = "Energia potencjalna";
+            this.energiaPotencjalnaToolStripMenuItem.Click += new System.EventHandler(this.energiaPotencjalnaToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -349,7 +376,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(6, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 72);
+            this.panel1.Size = new System.Drawing.Size(312, 72);
             this.panel1.TabIndex = 18;
             // 
             // hScrollBar1
@@ -358,7 +385,7 @@
             this.hScrollBar1.Location = new System.Drawing.Point(21, 121);
             this.hScrollBar1.Maximum = 255;
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(160, 19);
+            this.hScrollBar1.Size = new System.Drawing.Size(248, 19);
             this.hScrollBar1.TabIndex = 19;
             this.hScrollBar1.Value = 255;
             this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
@@ -369,7 +396,7 @@
             this.hScrollBar2.Location = new System.Drawing.Point(21, 148);
             this.hScrollBar2.Maximum = 255;
             this.hScrollBar2.Name = "hScrollBar2";
-            this.hScrollBar2.Size = new System.Drawing.Size(160, 19);
+            this.hScrollBar2.Size = new System.Drawing.Size(248, 19);
             this.hScrollBar2.TabIndex = 20;
             this.hScrollBar2.Value = 255;
             this.hScrollBar2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar2_Scroll);
@@ -377,10 +404,10 @@
             // hScrollBar3
             // 
             this.hScrollBar3.LargeChange = 1;
-            this.hScrollBar3.Location = new System.Drawing.Point(21, 180);
+            this.hScrollBar3.Location = new System.Drawing.Point(20, 177);
             this.hScrollBar3.Maximum = 255;
             this.hScrollBar3.Name = "hScrollBar3";
-            this.hScrollBar3.Size = new System.Drawing.Size(160, 19);
+            this.hScrollBar3.Size = new System.Drawing.Size(248, 19);
             this.hScrollBar3.TabIndex = 21;
             this.hScrollBar3.Value = 255;
             this.hScrollBar3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar3_Scroll);
@@ -406,7 +433,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 183);
+            this.label8.Location = new System.Drawing.Point(4, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(14, 13);
             this.label8.TabIndex = 24;
@@ -414,7 +441,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(194, 121);
+            this.textBox4.Location = new System.Drawing.Point(272, 121);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(46, 20);
@@ -423,7 +450,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(194, 148);
+            this.textBox5.Location = new System.Drawing.Point(272, 148);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(46, 20);
@@ -432,7 +459,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(194, 179);
+            this.textBox6.Location = new System.Drawing.Point(272, 176);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(46, 20);
@@ -478,7 +505,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Location = new System.Drawing.Point(13, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(247, 366);
+            this.groupBox3.Size = new System.Drawing.Size(324, 366);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Visible = false;
@@ -487,7 +514,7 @@
             // 
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(69, 251);
+            this.label10.Location = new System.Drawing.Point(119, 251);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 23);
             this.label10.TabIndex = 30;
@@ -500,7 +527,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(69, 209);
+            this.button2.Location = new System.Drawing.Point(119, 209);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 29;
@@ -517,11 +544,65 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "Dobierz kolor suwakami i zapisz przyciskiem";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(12, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(325, 366);
+            this.panel2.TabIndex = 30;
+            this.panel2.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(207, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Ep = max";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(207, 309);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Ep = 0";
+            // 
+            // energiaKinetycznaToolStripMenuItem
+            // 
+            this.energiaKinetycznaToolStripMenuItem.Name = "energiaKinetycznaToolStripMenuItem";
+            this.energiaKinetycznaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.energiaKinetycznaToolStripMenuItem.Text = "Energia kinetyczna";
+            this.energiaKinetycznaToolStripMenuItem.Click += new System.EventHandler(this.energiaKinetycznaToolStripMenuItem_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Location = new System.Drawing.Point(12, 27);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(325, 366);
+            this.groupBox4.TabIndex = 31;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(0, 7);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(325, 296);
+            this.panel3.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(271, 405);
+            this.ClientSize = new System.Drawing.Size(349, 405);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip1);
@@ -536,6 +617,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,6 +669,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStripMenuItem interpretacjaGraficznaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem energiaPotencjalnaToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolStripMenuItem energiaKinetycznaToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
