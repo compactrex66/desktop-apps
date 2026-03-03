@@ -29,6 +29,7 @@ namespace MenuStrip
             textBox2.Show();
             button1.Show();
             textBox3.Show();
+            groupBox2.Show();
             button1.Text = "Oblicz";
         }
 
@@ -42,6 +43,7 @@ namespace MenuStrip
             radioButton1.Show();
             radioButton2.Show();
             groupBox1.Show();
+            groupBox2.Show();
             label3.Show();
             listBox1.Show();
             label4.Show();
@@ -62,11 +64,12 @@ namespace MenuStrip
             label5.Hide();
             checkBox1.Hide();
             checkBox2.Hide();
-            groupBox3.Hide();
+            groupBox2.Hide();
             label2.Hide();
             textBox2.Hide();
             groupBox3.Hide();
             panel2.Hide();
+            panel3.Hide();
         }
 
         private Color GetChosenColor()
@@ -237,15 +240,19 @@ namespace MenuStrip
             Graphics graphics = panel2.CreateGraphics();
             Rectangle panelRectangle = panel2.ClientRectangle;
             Pen pen = new Pen(Color.Black, 2);
-            Pen pen2 = new Pen(DefaultBackColor, 2);
-            
+            Pen rubber = new Pen(DefaultBackColor, 2);
+            SolidBrush brush = new SolidBrush(Color.Black);
+
             int ellipseSize = 50, middlePanelX = panelRectangle.Right / 2 - ellipseSize / 2;
-            
-            for(float i = 1; i < 300; i*=1.2f)
+
+            graphics.DrawString("Ep=MAX", DefaultFont, brush, middlePanelX + 75, panelRectangle.Y + 30);
+            graphics.DrawString("Ep=0", DefaultFont, brush, middlePanelX + 75, panelRectangle.Y + 310);
+            graphics.DrawLine(pen, 5, panelRectangle.Y + 340, panelRectangle.Right - 5, panelRectangle.Y + 340);
+
+            for (float i = 1; i < 300; i*=1.2f)
             {
-                graphics.Clear(DefaultBackColor);
+                graphics.DrawEllipse(rubber, middlePanelX, panelRectangle.Y + 5 + i/1.2f, ellipseSize, ellipseSize);
                 graphics.DrawEllipse(pen, middlePanelX, panelRectangle.Y + 5 + i, ellipseSize, ellipseSize);
-                graphics.DrawLine(pen, 5, panelRectangle.Y + 345, panelRectangle.Right - 5, panelRectangle.Y + 345);
                 Thread.Sleep(5);
             }
         }
@@ -253,19 +260,27 @@ namespace MenuStrip
         private void energiaKinetycznaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideAllControls();
-            groupBox4.Show();
+            panel3.Show();
             Graphics graphics = panel3.CreateGraphics();
             Rectangle panelRectangle = panel3.ClientRectangle;
             Pen pen = new Pen(Color.Black, 2);
+            Pen rubber = new Pen(DefaultBackColor, 2);
+
             int carWidth = 50, carHeight = 25;
+            double sineAngle = 0;
 
             graphics.DrawLine(pen, panelRectangle.Left, panelRectangle.Bottom, panelRectangle.Right, panelRectangle.Bottom);
 
-            for(float i = 1; i < 300; i*=1.1f)
+            for (float i = 2; i < panelRectangle.Right - carWidth - 2;)
             {
-                graphics.Clear(DefaultBackColor);
-                graphics.DrawRectangle(pen, i, panelRectangle.Bottom - carHeight - 5, carWidth, carHeight);
+                i += (float)Math.Abs(Math.Sin(sineAngle));
+                sineAngle += 0.0073;
+                Console.WriteLine(Math.Sin(sineAngle));
+                Console.WriteLine(sineAngle);
+                graphics.DrawRectangle(pen, i, panelRectangle.Bottom - carHeight - 3, carWidth, carHeight);
                 Thread.Sleep(5);
+                if(i + (float)Math.Abs(Math.Sin(sineAngle)) < panelRectangle.Right - carWidth - 2)
+                    graphics.DrawRectangle(rubber, i, panelRectangle.Bottom - carHeight - 3, carWidth, carHeight);
             }
         }
     }
