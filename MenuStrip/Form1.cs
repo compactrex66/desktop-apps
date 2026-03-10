@@ -264,23 +264,31 @@ namespace MenuStrip
             Graphics graphics = panel3.CreateGraphics();
             Rectangle panelRectangle = panel3.ClientRectangle;
             Pen pen = new Pen(Color.Black, 2);
+            SolidBrush black = new SolidBrush(Color.Black);
             Pen rubber = new Pen(DefaultBackColor, 2);
+            SolidBrush brush = new SolidBrush(Color.Black);
 
-            int carWidth = 50, carHeight = 25;
-            double sineAngle = 0;
+            int carWidth = 50, carHeight = 25, ellipseSize = 15;
+            double degrees = 0;
 
+            graphics.DrawString("Ek=0", DefaultFont, brush, 2, panelRectangle.Bottom - carHeight - ellipseSize - 15);
+            graphics.DrawString("Ek=MAX", DefaultFont, brush, panelRectangle.Right / 2 - 20, panelRectangle.Bottom - carHeight - ellipseSize - 15);
+            graphics.DrawString("Ek=0", DefaultFont, brush, panelRectangle.Right - 30, panelRectangle.Bottom - carHeight - ellipseSize - 15);
             graphics.DrawLine(pen, panelRectangle.Left, panelRectangle.Bottom, panelRectangle.Right, panelRectangle.Bottom);
 
-            for (float i = 2; i < panelRectangle.Right - carWidth - 2;)
+            for (float i = 2; i < panelRectangle.Right - carWidth - 2; i += (float)Math.Abs(2 * Math.Sin(Math.PI * degrees / 180.0)))
             {
-                i += (float)Math.Abs(Math.Sin(sineAngle));
-                sineAngle += 0.0073;
-                Console.WriteLine(Math.Sin(sineAngle));
-                Console.WriteLine(sineAngle);
-                graphics.DrawRectangle(pen, i, panelRectangle.Bottom - carHeight - 3, carWidth, carHeight);
+                degrees += 0.85;
+                graphics.FillRectangle(black, i, panelRectangle.Bottom - carHeight - ellipseSize + 5, carWidth, carHeight);
+                graphics.FillEllipse(black, i, panelRectangle.Bottom - ellipseSize - 2, ellipseSize, ellipseSize);
+                graphics.FillEllipse(black, i + carWidth - ellipseSize, panelRectangle.Bottom - ellipseSize - 2, ellipseSize, ellipseSize);
                 Thread.Sleep(5);
-                if(i + (float)Math.Abs(Math.Sin(sineAngle)) < panelRectangle.Right - carWidth - 2)
-                    graphics.DrawRectangle(rubber, i, panelRectangle.Bottom - carHeight - 3, carWidth, carHeight);
+                if (i + (float)Math.Abs(Math.Sin(degrees)) < panelRectangle.Right - carWidth - 2)
+                {
+                    graphics.DrawRectangle(rubber, i, panelRectangle.Bottom - carHeight - ellipseSize + 5, 2, carHeight);
+                    graphics.DrawEllipse(rubber, i, panelRectangle.Bottom - ellipseSize - 3, ellipseSize, ellipseSize);
+                    graphics.DrawEllipse(rubber, i + carWidth - ellipseSize, panelRectangle.Bottom - ellipseSize - 3, ellipseSize, ellipseSize);
+                }    
             }
         }
     }

@@ -80,6 +80,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,7 +92,7 @@
             this.interpretacjaGraficznaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(348, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(349, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -233,7 +234,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(70, 280);
+            this.button1.Location = new System.Drawing.Point(118, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 5;
@@ -248,7 +249,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(245, 50);
+            this.textBox3.Size = new System.Drawing.Size(327, 50);
             this.textBox3.TabIndex = 6;
             this.textBox3.Visible = false;
             // 
@@ -301,7 +302,7 @@
             this.listBox1.MultiColumn = true;
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBox1.Size = new System.Drawing.Size(245, 43);
+            this.listBox1.Size = new System.Drawing.Size(318, 43);
             this.listBox1.TabIndex = 10;
             this.listBox1.Visible = false;
             // 
@@ -358,7 +359,7 @@
             // 
             this.checkBox1.Location = new System.Drawing.Point(1, 206);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(246, 31);
+            this.checkBox1.Size = new System.Drawing.Size(318, 31);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Im większa prędkość ciała tym większa energia potencjalna";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -368,7 +369,7 @@
             // 
             this.checkBox2.Location = new System.Drawing.Point(1, 243);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(246, 31);
+            this.checkBox2.Size = new System.Drawing.Size(318, 31);
             this.checkBox2.TabIndex = 17;
             this.checkBox2.Text = "Im wyżej od podłoża znajduje się ciało tym większa energia potencjalna";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -487,7 +488,7 @@
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Location = new System.Drawing.Point(12, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(248, 363);
+            this.groupBox2.Size = new System.Drawing.Size(325, 363);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Visible = false;
@@ -507,7 +508,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(13, 27);
+            this.groupBox3.Location = new System.Drawing.Point(10, 27);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(324, 366);
             this.groupBox3.TabIndex = 29;
@@ -550,7 +551,7 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(12, 27);
+            this.panel2.Location = new System.Drawing.Point(12, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(325, 366);
             this.panel2.TabIndex = 30;
@@ -558,7 +559,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Location = new System.Drawing.Point(12, 27);
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(325, 366);
             this.groupBox4.TabIndex = 31;
@@ -567,6 +568,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.groupBox4);
             this.panel3.Location = new System.Drawing.Point(12, 27);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(325, 296);
@@ -577,11 +579,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 405);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(349, 405);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -595,6 +596,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
